@@ -1,0 +1,5 @@
+.create-link-container * {
+  margin: 0 auto;
+  min-width: 60%;
+  text-align: center;
+}

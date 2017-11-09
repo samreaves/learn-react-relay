@@ -7,9 +7,14 @@ import {
 
 class LinkList extends Component {
   render() {
-    
+
+    const linkListStyles = {
+      textAlign: 'left',
+      padding: '20px'
+    };
+
     return (
-      <div>
+      <div style={linkListStyles}>
         {this.props.viewer.allLinks.edges.map(({ node }) => (
           <Link key={node.__id} link={node} />
         ))}
