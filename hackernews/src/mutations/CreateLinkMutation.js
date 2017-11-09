@@ -18,7 +18,7 @@ const mutation = graphql`
   }
 `;
 
-export default (description, url, callback) => {
+export default (description, url, successCallback, errorCallback) => {
 
   const variables = {
     input: {
@@ -34,9 +34,9 @@ export default (description, url, callback) => {
       mutation,
       variables,
       onCompleted: () => {
-        callback();
+        successCallback();
       },
-      onError: (error) => error => console.error(error)
+      onError: () => errorCallback()
     }
   );
 };
